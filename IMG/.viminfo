@@ -1,0 +1,43 @@
+# Vim 8.2 generó este archivo "viminfo".
+# Puede editarlo, ¡sólo si tiene cuidado!
+
+# Viminfo version
+|1,4
+
+# Valor de 'encoding' cuando se escribió este archivo
+*encoding=utf-8
+
+
+# hlsearch on (H) or off (h):
+~h
+# Historia de Línea de órdenes (de lo más nuevo a lo más antiguo):
+:q
+|2,0,1696264946,,"q"
+:wq
+|2,0,1696264930,,"wq"
+
+# Historia de Cadena de búsqueda (de lo más nuevo a lo más antiguo):
+
+# Historia de Expresión (de lo más nuevo a lo más antiguo):
+
+# Historia de Línea de entrada (de lo más nuevo a lo más antiguo):
+
+# Historia de Debug Line (de lo más nuevo a lo más antiguo):
+
+# Registros:
+
+# Marcas en el archivo:
+'0  20  6  ~/login.php
+|4,48,20,6,1696264946,"~/login.php"
+
+# Lista de saltos (el más reciente va primero):
+-'  20  6  ~/login.php
+|4,39,20,6,1696264946,"~/login.php"
+-'  1  0  ~/login.php
+|4,39,1,0,1696264815,"~/login.php"
+
+# Historia de las marcas en los archivos (de la más reciente a la más antigua):
+
+> ~/login.php
+	*	1696264934	0
+	"	20	6
