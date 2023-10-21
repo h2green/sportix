@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * Este archivo maneja la lógica de inicio de sesión.
+ * Si se recibe una solicitud POST, se verifica el nombre de usuario y la contraseña en la base de datos.
+ * Si las credenciales son correctas, se crea una sesión y se redirige al usuario a la página de inicio.
+ * Si las credenciales son incorrectas, se almacena un mensaje de error en la sesión y se redirige al usuario a la página de inicio de sesión.
+ * Si no se recibe una solicitud POST, se redirige al usuario a la página de inicio de sesión.
+ */
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $username   = $_POST["username"];
     $password   = $_POST["password"];
@@ -59,3 +67,5 @@ else {
     header("Location: ../login.php");
     die();
 }
+
+?>

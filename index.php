@@ -32,10 +32,11 @@ require_once 'backend/index_view.php';
 
     <link rel="stylesheet" href="STYLE/home.css">
     
-    //<?php
-    //check_login_success();
-    //check_register_success();
-    //?>
+    <?php
+    check_login_success();
+    check_register_success();
+    check_confirm();
+    ?>
     
 
 </head>

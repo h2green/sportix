@@ -1,9 +1,14 @@
 <?php
 
+/**
+ * Este archivo contiene la configuración de la sesión del usuario.
+ * Se establecen los parámetros de la cookie de sesión y se regenera la sesión cada cierto tiempo para evitar ataques de sesión.
+ */
+
 ini_set('session.use_only_cookies', 1);
 ini_set('session.use_strict_mode', 1);
 
-// Colocamos los parametros de la cookie de sesion
+// Establece la configuración de la cookie de sesión
 session_set_cookie_params([
     'lifetime' => 60 * 60 * 24,         // La cookie va a expirar despues de un dia
     'path' => '/',                      // La cookie va a estar disponible en todas las paginas
