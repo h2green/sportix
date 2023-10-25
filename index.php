@@ -159,8 +159,6 @@ require_once 'backend/index_view.php';
             </a>
         </div>
     </footer>
-
-    
 </body>
 
 </html>
