@@ -1,6 +1,6 @@
 <?php
-include_once 'includes/dbconn.inc.php';
 declare(strict_types=1);
+include_once 'includes/dbconn.inc.php';
 
 /**
  * Este archivo se encarga de confirmar la cuenta de usuario a través del token enviado por correo electrónico.
