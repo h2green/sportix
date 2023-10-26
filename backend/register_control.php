@@ -2,17 +2,63 @@
 declare(strict_types=1);
 
 /**
- * Verifica si alguno de los campos de entrada está vacío.
+ * Verifica si el campo de usuario esta vacio.
  *
  * @param string $username Nombre de usuario.
- * @param string $password Contraseña.
- * @param string $cpassword Confirmación de contraseña.
- * @param string $email Correo electrónico.
- * @return bool Retorna true si alguno de los campos está vacío, de lo contrario retorna false.
+ * @return bool Retorna true si el campo esta vacio, de lo contrario retorna false.
  */
-function is_input_empty($username, $password, $cpassword, $email) 
+
+function is_username_empty($username) 
 {
-    if (empty($username) || empty($password) || empty($cpassword) || empty($email)) {
+    if (empty($username)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+/**
+ * Verifica si el campo de contraseña esta vacio.
+ *
+ * @param string $password Contraseña.
+ * @return bool Retorna true si el campo esta vacio, de lo contrario retorna false.
+ */
+
+function is_password_empty($password)
+{
+    if (empty($password)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+/**
+ * Verifica si el campo de confirmacion de contraseña esta vacio.
+ *
+ * @param string $cpassword Confirmación de contraseña.
+ * @return bool Retorna true si el campo esta vacio, de lo contrario retorna false.
+ */
+
+function is_confpassword_empty($cpassword)
+{
+    if (empty($cpassword)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+/**
+ * Verifica si el campo de email esta vacio.
+ *
+ * @param string $email Correo electrónico.
+ * @return bool Retorna true si el campo esta vacio, de lo contrario retorna false.
+ */
+
+function is_email_empty($email)
+{
+    if (empty($email)) {
         return true;
     } else {
         return false;

@@ -12,9 +12,8 @@ body {
 }
 
 img {
-    margin-left: 28%;
-    width: 25vh;
-    height: 25vh;
+    margin-left: 32.5%;
+    width: 20vh;
 }
 
 form {
@@ -45,6 +44,7 @@ h3 {
     -webkit-background-clip: text;
     color: transparent;
 }
+
 
 ::placeholder {
     font-size: 15px;

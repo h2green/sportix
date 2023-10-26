@@ -32,8 +32,8 @@ require_once 'backend/register_view.php';
     <input name="send" type="submit" class="btn" value="Enviar">
   </form>
 
-  <?php 
-  check_register_errors(); 
+  <?php
+  check_register_errors();
   ?>
 </body>
 

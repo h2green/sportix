@@ -30,18 +30,7 @@ function check_user_loggedin()
 function check_register_success() 
 {
     if (isset($_GET["register"]) && $_GET["register"] === "success") {
-        echo '<script type="text/javascript">alert("Registro exitoso!");</script>';
-    }
-}
-
-/**
- * Función que verifica si el inicio de sesión del usuario ha sido exitoso y muestra una alerta.
- * Los frontend-devs pueden editar el echo para que se vea mas bonita la alerta.
- */
-function check_login_success()
-{
-    if (isset($_GET["login"]) && $_GET["login"] === "success") {
-        echo '<script type="text/javascript">alert("Iniciaste Sesion exitosamente!");</script>';
+        echo '<h2 class="parpadea" id="Respuesta">Registro Exitosamente</h2>';
     }
 }
 

@@ -24,9 +24,18 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
         $errors = [];
 
         // Valida los datos del formulario
-        if (is_input_empty($username, $password, $confPass, $email)) {
-            $errors["empty_input"] = "Llena todos los campos!";
+        if (is_username_empty($username)) {
+            $errors["empty_username_input"] = "Complete la columna 'Nombre'";
         } 
+        if (is_password_empty($password)) {
+            $errors["empty_password_input"] = "Complete la columna 'Contraseña'";
+        }
+        if (is_confpassword_empty($confPass)) {
+            $errors["empty_cpassword_input"] = "Complete la columna 'Repita la Contraseña'";
+        }
+        if (is_email_empty($email)) {
+            $errors["empty_email_input"] = "Complete la columna 'Email'";
+        }
         if (is_email_invalid($email)) 
         {
             $errors["invalid_email"] = "Email invalido!";
