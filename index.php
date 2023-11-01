@@ -20,23 +20,16 @@ require_once 'backend/index_view.php';
     <link
         href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Playfair+Display:wght@500&family=Poppins:wght@300&family=Roboto&family=Roboto+Condensed&display=swap"
         rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Martian+Mono:wght@300&family=Playfair+Display:wght@500&family=Poppins:wght@300&family=Roboto&family=Roboto+Condensed&display=swap"
-        rel="stylesheet">
     <!---->
 
     <title>Sportix</title>
 
     <link rel="stylesheet" href="STYLE/home.css">
-    
+
     <?php
     check_register_success();
     check_confirm();
     ?>
-    
 
 </head>
 
@@ -48,12 +41,12 @@ require_once 'backend/index_view.php';
                     <p>Carrito</p>
                 </a>
             </div>
-            <div class="help"><a href="help.html">
+            <div class="help"><a href="help.php">
                     <img src="IMG/ITEMS/help-outline.svg">
                     <p>Ayuda</p>
                 </a>
             </div>
-            <?php 
+            <?php
             check_user_loggedin();
             ?>
         </div>
@@ -64,11 +57,11 @@ require_once 'backend/index_view.php';
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="#">Carrito</a></li>
-                <li><a href="help.html">Ayuda</a></li>
+                <li><a href="help.php">Ayuda</a></li>
                 <?php
                 if (isset($_SESSION['user_id'])) {
-                    echo '<li><a href="backend/logout.php">Cerrar Sesion</a></li>';
-                    echo $_SESSION['username'];
+                    //echo '<li><a href="backend/logout.php">Cerrar Sesion</a></li>';
+                    echo '<li><a href="backend/logout.php">' . $_SESSION['username'] . '</a></li>';
                 } else {
                     echo '<li><a href="login.php">Usuario</a></li>';
                 }
@@ -77,19 +70,17 @@ require_once 'backend/index_view.php';
         </div>
     </header>
 
-    <h2 class="bienvenida">Bienvenido a Sportix, el mejor lugar para Sporty Chic</h2>
-
     <aside>
         <div class="container-publicidad">
-            <a href="">
+            <a href="https://www.instagram.com/centec5_/">
                 <img src="IMG/publicidad-Ins.png">
                 <p>Averigua lo que publica el centro de estudiantes</p>
             </a>
-            <a href="">
+            <a href="https://www.facebook.com/Escuelatecnica5lanus/?locale=es_LA">
                 <img src="IMG/publicidad-Face.png">
                 <p>Investiga lo que publica la escuela</p>
             </a>
-            <a href="">
+            <a href="https://eest5lanus.edu.ar/">
                 <img src="IMG/publicidad-Escuela.png">
                 <p>Informate la pagina web oficial de la escuela J.F.K</p>
             </a>
@@ -147,7 +138,7 @@ require_once 'backend/index_view.php';
     <footer>
         <img src="IMG/Logo-Sportix.png">
 
-        <small>	Copyright &#169; 2023 <b>Sportix</b> - Todos los Derechos Reservados</small>
+        <small> Copyright &#169; 2023 <b>Sportix</b> - Todos los Derechos Reservados</small>
 
         <div class="follow">
             <a href="#">

@@ -10,81 +10,11 @@ body {
     background: #f8f8f9;
 }
 
-.bienvenida {
-    font-family: 'Croissant One', cursive;
-    font-family: 'Martian Mono', monospace;
-    font-family: 'Playfair Display', serif;
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Roboto Condensed', sans-serif;
-    color: #1f1f23;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 8.9%;
-    margin: 1%;
-}
-
 h2 {
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
-    position: fixed;
     color: #f8f8f9;
-}
-
-.parpadea {
-    animation-name: parpadeo;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-
-    -webkit-animation-name: parpadeo;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-}
-
-@-moz-keyframes parpadeo {
-    0% {
-        opacity: 1.0;
-    }
-
-    50% {
-        opacity: 0.0;
-    }
-
-    100% {
-        opacity: 1.0;
-    }
-}
-
-@-webkit-keyframes parpadeo {
-    0% {
-        opacity: 1.0;
-    }
-
-    50% {
-        opacity: 0.0;
-    }
-
-    100% {
-        opacity: 1.0;
-    }
-}
-
-@keyframes parpadeo {
-    0% {
-        opacity: 1.0;
-    }
-
-    50% {
-        opacity: 0.0;
-    }
-
-    100% {
-        opacity: 1.0;
-    }
 }
 
 /* ? Tachar*/
@@ -134,6 +64,11 @@ header {
     height: 17vh;
 }
 
+.nom-usuario {
+    font-size: 20px;
+    color: #afa288;
+}
+
 /* ? Aside*/
 
 aside {
@@ -141,6 +76,7 @@ aside {
     height: 36vh;
     background-color: #afa288;
     border-radius: 7px;
+    margin-top: 11%;
 }
 
 .container-publicidad {
@@ -340,7 +276,7 @@ label,
     }
 
     .wrapper ul li a:hover {
-        color: #4158d0;
+        color: #afa288;
     }
 
     input[type="checkbox"] {
@@ -358,18 +294,12 @@ label,
         color: #202020;
     }
 
-    .content .title {
-        font-size: 40px;
-        font-weight: 700;
-    }
-
-    .content p {
-        font-size: 35px;
-        font-weight: 600;
+    main {
+        margin-top: 40%;
     }
 
     footer img {
-        width: 20vh;
+        width: 18vh;
     }
 
     .follow {
@@ -379,7 +309,7 @@ label,
     }
 
     .follow img {
-        width: 8vh;
+        width: 7vh;
         padding: 15%;
     }
 

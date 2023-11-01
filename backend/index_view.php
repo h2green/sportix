@@ -11,7 +11,7 @@ function check_user_loggedin()
         echo '<div class="user"><a href="backend/logout.php">';
         echo '<img src="IMG/ITEMS/user.svg">';
         echo '<p>Cerrar Sesion</p>';
-        echo $_SESSION['username'];
+        echo '<p class="nom-usuario">' . $_SESSION['username'] . '</p>';
         echo '</a>';
         echo '</div>';
     } else {

@@ -4,6 +4,7 @@
     font-family: 'Poppins', sans-serif;
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -34,6 +35,8 @@ body {
 /* ? Apartir de acá es el header */
 
 header {
+    position: fixed;
+    top: 0;
     width: 100%;
     background-color: rgb(31, 31, 35);
     display: flex;
@@ -70,6 +73,11 @@ header {
     height: 17vh;
 }
 
+.nom-usuario {
+    font-size: 20px;
+    color: #afa288;
+}
+
 /* ? Apartir de acá es el ScrollSpy/nav*/
 
 section {
@@ -96,24 +104,8 @@ section h2 {
     animation: tracking-in-expand-fwd-top 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
-@keyframes tracking-in-expand-fwd-top {
-    0% {
-        letter-spacing: -0.5em;
-        transform: translateZ(-700px) translateY(-500px);
-        opacity: 0;
-    }
-
-    40% {
-        opacity: 0.6;
-    }
-
-    100% {
-        transform: translateZ(0) translateY(0);
-        opacity: 1;
-    }
-}
-
 nav {
+    margin-top: 10.8%;
     width: 100%;
     height: 5vh;
     background: #afa288;
@@ -127,6 +119,9 @@ section {
     color: #1f1f23;
 }
 
+::-webkit-scrollbar {
+    width: 0;
+}
 /* TODOS: Esto es "Como comprar"*/
 
 .grid-container {
@@ -218,9 +213,8 @@ button {
 
 button span {
     cursor: pointer;
-    display: inline-block;
-    position: relative;
     transition: 0.5s;
+    color: #f8f8f9;
 }
 
 button span:after {
@@ -316,16 +310,6 @@ label,
 }
 
 @media (max-width:750px) {
-
-    aside,
-    .container-publicidad {
-        display: none;
-    }
-
-    .bienvenida {
-        padding-top: 35%;
-        font-size: 18px;
-    }
 
     #items {
         display: none;
@@ -428,7 +412,7 @@ label,
     }
 
     .wrapper ul li a:hover {
-        color: #4158d0;
+        color: #afa288;
     }
 
     input[type="checkbox"] {
@@ -457,6 +441,10 @@ label,
     }
 
     /* ! ScrollSpy/nav*/
+
+    nav {
+        margin-top: 30%;
+    }
 
     section {
         height: 120vh;

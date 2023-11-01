@@ -11,8 +11,13 @@ body {
     justify-content: center;
 }
 
+.container-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 img {
-    margin-left: 32.5%;
     width: 20vh;
 }
 
@@ -38,6 +43,7 @@ form {
 }
 
 h2,
+a,
 h3 {
     text-align: center;
     background: linear-gradient(#8f7d61, #1f1f23);
@@ -45,9 +51,29 @@ h3 {
     color: transparent;
 }
 
-
 ::placeholder {
     font-size: 15px;
+}
+
+/* !Error */
+
+.alert-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+
+.alert {
+    padding: 15px;
+    /* margin-bottom: 20px; */
+    border: 1px solid transparent;
+    border-radius: 4px;
+    width: 55vh;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 /* !Check*/
@@ -113,9 +139,14 @@ h3 {
     }
 }
 
+.container-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .btn {
-    margin-top: 10%;
-    margin-left: 33%;
+    margin-top: 3%;
     appearance: none;
     background-color: transparent;
     border: 0.125em solid #8f7d61;
@@ -151,4 +182,12 @@ h3 {
 .btn:active {
     box-shadow: none;
     transform: translateY(0);
+}
+
+/* !Responsive */
+
+@media (max-width:750px) {
+    .alert {
+        width: 50vh;
+    }
 }

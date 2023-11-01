@@ -17,7 +17,9 @@ require_once 'backend/login_view.php';
 
 <body>
   <form action="backend/login.php" method="post" autocomplete="off">
-    <img src="IMG/Logo-Sportix.png">
+    <div class="container-img">
+      <img src="IMG/Logo-Sportix.png">
+    </div>
 
     <h2>Inicia Sesión</h2>
 
@@ -27,9 +29,9 @@ require_once 'backend/login_view.php';
     <div class="input-container">
       <input type="password" name="password" placeholder="Contraseña">
     </div>
-
-    <input name="send" type="submit" class="btn" value="Enviar">
-
+    <div class="container-submit">
+      <input name="send" type="submit" class="btn" value="Enviar">
+    </div>
     <h4>No tenes una cuenta? <a href="register.php">Registrate ahora!!</a></h4>
   </form>
 

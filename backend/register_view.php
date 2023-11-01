@@ -64,24 +64,3 @@ function check_register_errors()
 }
 
 ?>
-
-<script src="../JS/jquery-3.7.1.min.js">
-function error
-</script>
-
-<style>
-    .alert-warning {
-        color: #8a6d3b;
-        background-color: #fcf8e3;
-        border-color: #faebcc;
-    }
-
-    .alert {
-        padding: 15px;
-        margin-bottom: 20px;
-        border: 1px solid transparent;
-        border-radius: 4px;
-        width: 50vh;
-        height: 4vh;
-    }
-</style>

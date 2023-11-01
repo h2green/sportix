@@ -11,8 +11,13 @@ body {
     justify-content: center;
 }
 
+.container-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 img {
-    margin-left: 28%;
     width: 25vh;
     height: 25vh;
 }
@@ -28,7 +33,9 @@ form {
     font-size: 20px;
 }
 
-h2, h4, a{
+h2,
+h4,
+a {
     text-align: center;
     background: linear-gradient(#8f7d61, #1f1f23);
     -webkit-background-clip: text;
@@ -54,7 +61,7 @@ h4 {
     font-size: 15px;
 }
 
-/* Customize the label (the checkbox-btn) */
+/* !Customize the label (the checkbox-btn) */
 
 @keyframes pulse {
 
@@ -68,9 +75,14 @@ h4 {
     }
 }
 
+.container-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .btn {
     margin-top: 10%;
-    margin-left: 33%;
     appearance: none;
     background-color: transparent;
     border: 0.125em solid #8f7d61;

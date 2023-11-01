@@ -1,3 +1,10 @@
+<!-- <?php //include 'backend/connection.php'; if(!isset($_SESSION['token'])){header('Location: login.php');}?> -->
+
+<?php
+require_once 'backend/includes/config_session.inc.php';
+require_once 'backend/index_view.php';
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -24,26 +31,29 @@
     <title>Sportix</title>
 
     <link rel="stylesheet" href="STYLE/help.css">
+
+    <?php
+    check_register_success();
+    check_confirm();
+    ?>
 </head>
 
 <body>
     <header>
-        <div class="logo"><a href="index.html"><img src="IMG/Logo-Sportix.png"></a></div>
+        <div class="logo"><a href="index.php"><img src="IMG/Logo-Sportix.png"></a></div>
         <div id="items">
             <div class="flight"><a href="#"><img src="IMG/ITEMS/cart-outline.svg">
                     <p>Carrito</p>
                 </a>
             </div>
-            <div class="help"><a href="#">
+            <div class="help"><a href="help.php">
                     <img src="IMG/ITEMS/help-outline.svg">
                     <p>Ayuda</p>
                 </a>
             </div>
-            <div class="user"><a href="login.php">
-                    <img src="IMG/ITEMS/user.svg">
-                    <p>Usuario</p>
-                </a>
-            </div>
+            <?php
+            check_user_loggedin();
+            ?>
         </div>
 
         <input type="checkbox" id="active">
@@ -52,8 +62,15 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#">Carrito</a></li>
-                <li><a href="help.html">Ayuda</a></li>
-                <li><a href="login.php">Usuario</a></li>
+                <li><a href="help.php">Ayuda</a></li>
+                <?php
+                if (isset($_SESSION['user_id'])) {
+                    //echo '<li><a href="backend/logout.php">Cerrar Sesion</a></li>';
+                    echo '<li><a href="backend/logout.php">' . $_SESSION['username'] . '</a></li>';
+                } else {
+                    echo '<li><a href="login.php">Usuario</a></li>';
+                }
+                ?>
             </ul>
         </div>
     </header>
@@ -97,7 +114,9 @@
                 <p>Lugar en donde estamos</p>
             </div>
         </div>
+
     </section>
+
     <section id="about">
         <h2 class="tracking-in-expand-fwd-top">Devoluciones</h2>
         <h3>Precencial</h3>
@@ -134,6 +153,7 @@
         <p>Una vez acreditado el pago del costo de cambio y nueva entrega, OCA pasará por tu domicilio a retirar el
             producto a cambiar. Una vez revisado el perfecto estado del mismo, te entregarán el nuevo pedido.</p>
     </section>
+
     <section id="services">
         <h2 class="tracking-in-expand-fwd-top">Términos y Condiciones</h2>
         <h3>¡Bienvenido a Sportix!</h3>
@@ -164,12 +184,12 @@
         </p>
 
         <button>
-            <a href="https://www.termsandconditionsgenerator.com/live.php?token=pxtrKRxOOnCbz0Q8laV45VzaVQTQ2Mt1">
-                <span>Button</span>
+            <a href="ter-y-cond.html">
+                <span>Seguir</span>
             </a>
         </button>
-
     </section>
+
     <section id="contact">
         <div class="container-contactos">
             <h2 class="subtitulo tracking-in-expand-fwd-top">Contactos</h2>
@@ -201,7 +221,8 @@
             <div class="tito">
                 <h2>Valentin Tito</h2>
                 <h3>Estudiante de la escuela J.F.K.</h3>
-                <p>Soy delegado de mi curso, aspiro a trabajar de FrontEnd, no me resulta dificil aprender otros lenguajes
+                <p>Soy delegado de mi curso, aspiro a trabajar de FrontEnd, no me resulta dificil aprender otros
+                    lenguajes
                     tanto de FrontEnd y de BackEnd y los lenguajes que se son:
                 </p>
                 <li>HTML</li>
