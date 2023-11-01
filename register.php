@@ -33,7 +33,7 @@ require_once 'backend/register_view.php';
         <div class="transition"></div>
       </label>
     </div>
-    <h3><a href="https://www.termsandconditionsgenerator.com/live.php?token=pxtrKRxOOnCbz0Q8laV45VzaVQTQ2Mt1">Terminos y
+    <h3><a href="ter-y-cond.html">Terminos y
         condiciones</a></h3>
     <div class="container-submit">
       <input name="send" type="submit" class="btn" value="Enviar">
