@@ -122,6 +122,7 @@ section {
 ::-webkit-scrollbar {
     width: 0;
 }
+
 /* TODOS: Esto es "Como comprar"*/
 
 .grid-container {
@@ -176,9 +177,22 @@ section {
     text-align: center;
 }
 
-.container-boton-devolucion {
+#container-volver {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+#container-volver img {
+    width: 7vh;
+}
+
+#container-volver a {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #afa288;
 }
 
 /* TODOS: Esto es "Teminos y condiciones"*/
@@ -276,13 +290,9 @@ button:hover span:after {
 
 .tito {
     grid-column: 5 / 7;
-    border: solid #afa288 3px;
+    border: solid rgb(176, 162, 135) 3px;
     border-radius: 7px;
     box-shadow: rgb(31, 31, 35, 0.7) 13px 13px 10px;
-}
-
-.container-boton-contactos {
-    grid-column: 3 / 6;
 }
 
 .brian h2,

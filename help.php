@@ -153,12 +153,10 @@ require_once 'backend/index_view.php';
         <p>Una vez acreditado el pago del costo de cambio y nueva entrega, OCA pasará por tu domicilio a retirar el
             producto a cambiar. Una vez revisado el perfecto estado del mismo, te entregarán el nuevo pedido.</p>
 
-        <div class="container-boton-devolucion">
-            <button>
-                <a href="#home">
-                    <span>Volver</span>
-                </a>
-            </button>
+        <div id="container-volver">
+            <a href="#home">
+                <img src="IMG/arrow-circle-up.svg">
+            </a>
         </div>
     </section>
 
@@ -196,6 +194,12 @@ require_once 'backend/index_view.php';
                 <span>Seguir</span>
             </a>
         </button>
+
+        <div id="container-volver">
+            <a href="#home">
+                <img src="IMG/arrow-circle-up.svg">
+            </a>
+        </div>
     </section>
 
     <section id="contact">
@@ -238,14 +242,13 @@ require_once 'backend/index_view.php';
                 <li>C#</li>
                 <li>Bootstrap</li>
             </div>
-
-            <button class="container-boton-contactos">
-                <a href="#home">
-                    <span>Volver</span>
-                </a>
-            </button>
         </div>
     </section>
+    <div id="container-volver">
+        <a href="#home">
+            <img src="IMG/arrow-circle-up.svg">
+        </a>
+    </div>
 </body>
 
 </html>
