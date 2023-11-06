@@ -33,7 +33,7 @@ function check_register_success()
 
         echo '<div id="notification">';
         echo '<div id="notification__body">';
-        echo 'Verifica tu email';
+        echo 'Verifica tu email &#128140;';
         echo '</div>';
         echo '<div id="notification__progress"></div>';
         echo '</div>';
@@ -42,7 +42,7 @@ function check_register_success()
     {
         echo '<div id="notification">';
         echo '<div id="notification__body">';
-        echo 'Inicio de sesion completado! &#128640;';
+        echo 'Inicio de sesion completado! &#9989;';
         echo '</div>';
         echo '<div id="notification__progress"></div>';
         echo '</div>';
