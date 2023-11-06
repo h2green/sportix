@@ -26,14 +26,13 @@ require_once 'backend/index_view.php';
 
     <link rel="stylesheet" href="STYLE/home.css">
 
-    <?php
-    check_register_success();
-    check_confirm();
-    ?>
-
 </head>
 
 <body>
+    <?php
+    check_register_success();
+    ?>
+
     <header>
         <div class="logo"><a href="index.php"><img src="IMG/Logo-Sportix.png"></a></div>
         <div id="items">
@@ -49,6 +48,7 @@ require_once 'backend/index_view.php';
             <?php
             check_user_loggedin();
             ?>
+
         </div>
 
         <input type="checkbox" id="active">
@@ -134,7 +134,15 @@ require_once 'backend/index_view.php';
         </div>
         <div class="item">div 7</div>
     </main>
-
+    <!--
+    <div class="notification">
+        <div class="notification__body">
+            Inicio de sesion completado! &#128640;
+            Registro completado! &#128640;
+        </div>
+        <div class="notification__progress"></div>
+    </div>
+    -->
     <footer>
         <img src="IMG/Logo-Sportix.png">
 

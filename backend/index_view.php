@@ -30,7 +30,22 @@ function check_user_loggedin()
 function check_register_success() 
 {
     if (isset($_GET["register"]) && $_GET["register"] === "success") {
-        echo '<h2 class="parpadea" id="Respuesta">Registro Exitosamente</h2>';
+
+        echo '<div id="notification">';
+        echo '<div id="notification__body">';
+        echo 'Verifica tu email';
+        echo '</div>';
+        echo '<div id="notification__progress"></div>';
+        echo '</div>';
+    }
+    else if(isset($_SESSION['user_id']))
+    {
+        echo '<div id="notification">';
+        echo '<div id="notification__body">';
+        echo 'Inicio de sesion completado! &#128640;';
+        echo '</div>';
+        echo '<div id="notification__progress"></div>';
+        echo '</div>';
     }
 }
 

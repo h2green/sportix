@@ -10,13 +10,6 @@ body {
     background: #f8f8f9;
 }
 
-h2 {
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #f8f8f9;
-}
-
 /* ? Tachar*/
 .tachado {
     text-decoration: line-through;
@@ -124,6 +117,82 @@ main {
     width: 30vh;
     border-radius: 7px;
 }
+
+/* ? Notificacion*/
+
+:root {
+    --notification-background: #313e2c;
+    --notification-primary: #aaec8a;
+    --background: #FAF9FF;
+}
+
+#notification {
+    position: fixed;
+    width: max-content;
+    left: 0; 
+    right: 0; 
+    bottom: 24px;
+    margin-left: auto; 
+    margin-right: auto; 
+    border-radius: 6px;
+    background-color: var(
+        --notification-background);
+    color: var(--notification-primary);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(30px);
+    opacity: 0;
+    visibility: hidden;
+    animation: fade-in 3s linear;
+}
+
+#notification__icon {
+    height: 26px;
+    width: 26px;
+    margin-right: 4px;
+}
+
+#notification__body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px 8px;
+}
+
+#notification__progress {
+    position: absolute;
+    left: 4px;
+    bottom: 4px;
+    width: calc(100% - 8px);
+    height: 3px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: linear-gradient(
+        to right, 
+        var(--notification-background),  
+        var(--notification-primary)
+    );
+    border-radius: inherit;
+    animation: progress 2.5s 0.3s linear;
+}
+
+@keyframes fade-in {
+    5% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    95% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes progress {
+    to {
+        transform: scaleX(1);
+    }
+}
+
 
 /* ? Apartir de acá es el footer*/
 
