@@ -42,3 +42,43 @@ strong {
 .page {
     padding: 25px
 }
+
+button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #1f1f23;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 17px;
+    padding: 16px;
+    width: 130px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button span {
+    cursor: pointer;
+    transition: 0.5s;
+    color: #f8f8f9;
+}
+
+button span:after {
+    content: '»';
+    color: #f8f8f9;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+}
+
+button:hover span {
+    padding-right: 15px;
+}
+
+button:hover span:after {
+    opacity: 1;
+    right: 0;
+}

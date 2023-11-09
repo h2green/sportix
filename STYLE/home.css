@@ -224,7 +224,7 @@ small {
     width: 13vh;
 }
 
-/* * Responsive*/
+/**Responsive*/
 
 input,
 label,
@@ -239,11 +239,7 @@ label,
         display: none;
     }
 
-    .bienvenida {
-        padding-top: 35%;
-        font-size: 18px;
-    }
-
+    /* ? header*/
     #items {
         display: none;
     }
@@ -363,10 +359,16 @@ label,
         color: #202020;
     }
 
+    /* ? main*/
     main {
         margin-top: 40%;
     }
 
+    .item {
+        height: 45.5vh;
+    }
+
+    /* ? footer*/
     footer img {
         width: 18vh;
     }

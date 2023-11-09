@@ -12,3 +12,10 @@ exit
 who
 quit
 exit
+dir
+cd ..
+ls
+cd git
+cd olestito
+mkdir javacrud
+exit

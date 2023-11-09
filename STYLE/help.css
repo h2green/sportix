@@ -238,6 +238,7 @@ button span {
 
 button span:after {
     content: '»';
+    color: #f8f8f9;
     position: absolute;
     opacity: 0;
     top: 0;

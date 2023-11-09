@@ -25,67 +25,15 @@ require_once 'backend/index_view.php';
     <title>Sportix</title>
 
     <link rel="stylesheet" href="STYLE/home.css">
-
 </head>
 
 <body>
     <?php
     check_register_success();
+    require('LAYOUT/header.php');
     ?>
 
-    <header>
-        <div class="logo"><a href="index.php"><img src="IMG/Logo-Sportix.png"></a></div>
-        <div id="items">
-            <div class="flight"><a href="#"><img src="IMG/ITEMS/cart-outline.svg">
-                    <p>Carrito</p>
-                </a>
-            </div>
-            <div class="help"><a href="help.php">
-                    <img src="IMG/ITEMS/help-outline.svg">
-                    <p>Ayuda</p>
-                </a>
-            </div>
-            <?php
-            check_user_loggedin();
-            ?>
-
-        </div>
-
-        <input type="checkbox" id="active">
-        <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
-        <div class="wrapper">
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="#">Carrito</a></li>
-                <li><a href="help.php">Ayuda</a></li>
-                <?php
-                if (isset($_SESSION['user_id'])) {
-                    //echo '<li><a href="backend/logout.php">Cerrar Sesion</a></li>';
-                    echo '<li><a href="backend/logout.php">' . $_SESSION['username'] . '</a></li>';
-                } else {
-                    echo '<li><a href="login.php">Usuario</a></li>';
-                }
-                ?>
-            </ul>
-        </div>
-    </header>
-
-    <aside>
-        <div class="container-publicidad">
-            <a href="https://www.instagram.com/centec5_/">
-                <img src="IMG/publicidad-Ins.png">
-                <p>Averigua lo que publica el centro de estudiantes</p>
-            </a>
-            <a href="https://www.facebook.com/Escuelatecnica5lanus/?locale=es_LA">
-                <img src="IMG/publicidad-Face.png">
-                <p>Investiga lo que publica la escuela</p>
-            </a>
-            <a href="https://eest5lanus.edu.ar/">
-                <img src="IMG/publicidad-Escuela.png">
-                <p>Informate la pagina web oficial de la escuela J.F.K</p>
-            </a>
-        </div>
-    </aside>
+    <?php require('LAYOUT/aside.php'); ?>
 
     <main>
         <div class="item">
@@ -132,31 +80,32 @@ require_once 'backend/index_view.php';
             <p>Gorra Adidas</p>
             <h3>$17.000</h3>
         </div>
-        <div class="item">div 7</div>
+        <div class="item">
+            <img src="IMG/ZAPATILLAS/ZapatillaNIKE-01.png">
+            <!--Chequear descripcion
+            https://www.nike.com.ar/air-jordan-13-retro-414571-062/p-->
+            <p>Zapatillas Nike</p>
+            <h4><span class="tachado">$186.999</span></h4>
+            <h3>$150.000</h3>
+        </div>
+        <div class="item">
+            <img src="IMG/REMERAS/VOGUE-frente.png">
+            <!--Chequear descripcion
+            https://shop.vogue.de/products/vogue-t-shirt-schwarz-mit-glitzernder-logo-stickerei-->
+            <p>Remera Vogue para mujeres</p>
+            <h4><span class="tachado">$35.000</span></h4>
+            <h3>$26.000</h3>
+        </div>
+        <div class="item">
+            <img src="IMG/REMERAS/chombaVOGUE-frente.png">
+            <!--Chequear descripcion
+            https://shop.vogue.de/products/vogue-polo-shirt-ivory-mit-schwarzer-logo-stickerei-->
+            <p>Chomba Vogue para mujeres</p>
+            <h3>$26.000</h3>
+        </div>
     </main>
-    <!--
-    <div class="notification">
-        <div class="notification__body">
-            Inicio de sesion completado! &#128640;
-            Registro completado! &#128640;
-        </div>
-        <div class="notification__progress"></div>
-    </div>
-    -->
-    <footer>
-        <img src="IMG/Logo-Sportix.png">
 
-        <small> Copyright &#169; 2023 <b>Sportix</b> - Todos los Derechos Reservados</small>
-
-        <div class="follow">
-            <a href="#">
-                <img src="IMG/ITEMS/facebook.svg">
-            </a>
-            <a href="https://www.instagram.com/sporttix_store/">
-                <img src="IMG/ITEMS/instagram.svg">
-            </a>
-        </div>
-    </footer>
+    <?php require('LAYOUT/footer.php'); ?>
 </body>
 
 </html>
