@@ -118,6 +118,10 @@ main {
     border-radius: 7px;
 }
 
+.item a {
+    color: #fff;
+    text-align: center;
+}
 /* ? Notificacion*/
 
 :root {

@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background: #f8f8f9;
+}
+
+/* ? Apartir de acá es el header */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(31, 31, 35);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#items {
+    display: flex;
+}
+
+#items div:hover {
+    transition: 0.7s;
+    transform: translateY(-7px);
+}
+
+#items div {
+    padding: 15px;
+    text-align: center;
+    transition: 0.7s;
+}
+
+#items img {
+    width: 10vh;
+    height: 10vh;
+}
+
+#items p {
+    color: #f8f8f9;
+}
+
+.logo img {
+    width: 17vh;
+    height: 17vh;
+}
+
+.nom-usuario {
+    font-size: 20px;
+    color: #afa288;
+}
+
+/* ? Apartir de acá es el main/articulo*/
+
+main {
+    background-color: #afa288;
+    margin: 13% 3% 3% 3%;
+    height: 78vh;
+    border-radius: 7px;
+}
+
+.container-img {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+img {
+    width: 50vh;
+    border-radius: 16px;
+    padding: 5px;
+}
+
+.container-descripcion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-descripcion p {
+    font-size: 20px;
+}
+
+/* * Carrito*/
+
+.cta {
+    border: none;
+    background: none;
+}
+
+.cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 14px;
+    padding-right: 15px;
+    text-transform: uppercase;
+}
+
+.cta svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+.cta:active svg {
+    transform: scale(0.9);
+}
+
+.hover-underline-animation {
+    position: relative;
+    color: black;
+    padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* ? Apartir de acá es el footer*/
+
+footer {
+    height: 150px;
+    width: 100%;
+    background-color: #1f1f23;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer img {
+    width: 23vh;
+}
+
+small {
+    color: #f8f8f9;
+    font-size: 17px;
+}
+
+.follow {
+    display: flex;
+    width: 15%;
+    justify-content: space-around;
+}
+
+.follow img {
+    width: 13vh;
+}
+
+/**Responsive*/
+
+input,
+label,
+.wrapper {
+    display: none;
+}
