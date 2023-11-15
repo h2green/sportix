@@ -115,7 +115,7 @@ Agradecemos y valoramos cualquier contribución que desees hacer al proyecto. Aq
 # Licencia y Créditos:
 ---
 ## Licencia
-Este proyecto se distribuye bajo la licencia Creative Commons Attribution 4.0	
+Sportix © 2023 by Olesnievicz Brian, Tito Valentin, Reynoso Joaquin is licensed under license CC BY 4.0 
 
 ## Créditos
 Desarrollado por:
