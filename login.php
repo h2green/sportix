@@ -18,10 +18,16 @@ require_once 'backend/login_view.php';
 <body>
   <form action="backend/login.php" method="post" autocomplete="off">
     <div class="container-img">
-      <img src="IMG/Logo-Sportix.png">
+      <a href="index">
+        <img src="IMG/Logo-Sportix.png">
+      </a>
     </div>
 
     <h2>Inicia Sesión</h2>
+
+    <?php
+    check_login_errors();
+    ?>
 
     <div class="input-container">
       <input type="text" name="username" placeholder="Nombre">
@@ -32,12 +38,8 @@ require_once 'backend/login_view.php';
     <div class="container-submit">
       <input name="send" type="submit" class="btn" value="Enviar">
     </div>
-    <h4>No tenes una cuenta? <a href="register.php">Registrate ahora!!</a></h4>
+    <h4>No tenes una cuenta? <a href="register">Registrate ahora!!</a></h4>
   </form>
-
-  <?php
-  check_login_errors();
-  ?>
 </body>
 
 </html>

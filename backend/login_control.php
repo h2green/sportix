@@ -23,9 +23,9 @@ function is_input_empty(string $username, string $password)
  * @param bool|array $result El resultado de la consulta de la base de datos.
  * @return bool Retorna verdadero si el resultado es incorrecto, de lo contrario retorna falso.
  */
-function is_username_wrong(bool|array $result)
+function username_exists($result)
 {
-    if (!$result) {
+    if ($result) {
         return true;
     } else {
         return false;

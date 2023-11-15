@@ -1,4 +1,5 @@
-<!-- <?php //include 'backend/connection.php'; if(!isset($_SESSION['token'])){header('Location: login.php');}?> -->
+<!-- <?php //include 'backend/connection.php'; if(!isset($_SESSION['token'])){header('Location: login.php');}
+        ?> -->
 
 <?php
 require_once 'backend/includes/config_session.inc.php';
@@ -17,15 +18,11 @@ require_once 'backend/index_view.php';
     <!--Fonts Google-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Playfair+Display:wght@500&family=Poppins:wght@300&family=Roboto&family=Roboto+Condensed&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Playfair+Display:wght@500&family=Poppins:wght@300&family=Roboto&family=Roboto+Condensed&display=swap" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Martian+Mono:wght@300&family=Playfair+Display:wght@500&family=Poppins:wght@300&family=Roboto&family=Roboto+Condensed&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Martian+Mono:wght@300&family=Playfair+Display:wght@500&family=Poppins:wght@300&family=Roboto&family=Roboto+Condensed&display=swap" rel="stylesheet">
     <!---->
 
     <title>Sportix</title>
@@ -39,17 +36,53 @@ require_once 'backend/index_view.php';
 </head>
 
 <body>
-    <?php require('LAYOUT/header.php'); ?>
 
-    <nav>
-        <a href="#home">Como comprar</a>
-        <a href="#about">Devoluciones</a>
-        <a href="#services">Termino y condiciones</a>
-        <a href="#contact">Contactos</a>
-    </nav>
+    <header>
+        <div class="logo"><a href="index"><img src="IMG/Logo-Sportix.png"></a></div>
+        <div id="items">
+            <div class="flight"><a href="cart"><img src="IMG/ITEMS/cart-outline.svg">
+                    <p>Carrito</p>
+                </a>
+            </div>
+            <div class="help"><a href="help">
+                    <img src="IMG/ITEMS/help-outline.svg">
+                    <p>Ayuda</p>
+                </a>
+            </div>
+            <?php
+            check_user_loggedin();
+            ?>
+        </div>
+
+        <input type="checkbox" id="active">
+        <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+        <div class="wrapper">
+            <ul>
+                <li><a href="index">Home</a></li>
+                <li><a href="cart">Carrito</a></li>
+                <li><a href="help">Ayuda</a></li>
+                <?php
+                if (isset($_SESSION['user_id'])) {
+                    //echo '<li><a href="backend/logout.php">Cerrar Sesion</a></li>';
+                    if (isset($_SESSION['username'])) {
+                        echo '<li><a href="backend/logout.php">' . $_SESSION['username'] . '</a></li>';
+                    } else {
+                        echo '<li><a href="login">Usuario</a></li>';
+                    }
+                }
+                ?>
+            </ul>
+        </div>
+
+        <nav>
+            <a href="#home">Como comprar</a>
+            <a href="#about">Devoluciones</a>
+            <a href="#services">Termino y condiciones</a>
+            <a href="#contact">Contactos</a>
+        </nav>
+    </header>
 
     <section id="home">
-
         <div class="grid-container">
             <h2 class="item1 tracking-in-expand-fwd-top">Como comprar</h2>
             <div class="item2">
@@ -73,10 +106,7 @@ require_once 'backend/index_view.php';
                     pedido. Y una vez que se acredite el pago, recibirás otro correo para informarte de que tu pedido ha
                     sido enviado.</p>
             </div>
-            <div class="item3"><iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.621048590337!2d-58.38953392522083!3d-34.71473687291472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccd393d950e51%3A0x4b28fad07877b4f0!2sEEST%20N%C2%B0%205%20%22John%20F.%20Kennedy%22!5e0!3m2!1ses-419!2sar!4v1697220931406!5m2!1ses-419!2sar"
-                    width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="item3"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.621048590337!2d-58.38953392522083!3d-34.71473687291472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccd393d950e51%3A0x4b28fad07877b4f0!2sEEST%20N%C2%B0%205%20%22John%20F.%20Kennedy%22!5e0!3m2!1ses-419!2sar!4v1697220931406!5m2!1ses-419!2sar" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <p>Lugar en donde estamos</p>
             </div>
         </div>
@@ -118,12 +148,6 @@ require_once 'backend/index_view.php';
 
         <p>Una vez acreditado el pago del costo de cambio y nueva entrega, OCA pasará por tu domicilio a retirar el
             producto a cambiar. Una vez revisado el perfecto estado del mismo, te entregarán el nuevo pedido.</p>
-
-        <div id="container-volver">
-            <a href="#home">
-                <img src="IMG/arrow-circle-up.svg">
-            </a>
-        </div>
     </section>
 
     <section id="services">
@@ -160,12 +184,6 @@ require_once 'backend/index_view.php';
                 <span>Seguir</span>
             </a>
         </button>
-
-        <div id="container-volver">
-            <a href="#home">
-                <img src="IMG/arrow-circle-up.svg">
-            </a>
-        </div>
     </section>
 
     <section id="contact">
@@ -174,9 +192,7 @@ require_once 'backend/index_view.php';
             <div class="brian">
                 <h2>Brian Olesnievicz</h2>
                 <h3>Estudiante de la escuela J.F.K.</h3>
-                <p>Soy un estudiante que aspira a trabajar con una ingenieria enfocada en la Ciencia de Datos.
-                    Me encargue del Backend de la pagina, los lenguajes de los cuales poseo experiencia previa son:
-                </p>
+                <p>Soy un estudiante que aspira a trabajar con ser Ingeniero de Machine Learning.</p>
                 <li>PHP</li>
                 <li>JAVA</li>
                 <li>JS</li>
@@ -184,6 +200,7 @@ require_once 'backend/index_view.php';
                 <li>LUA</li>
                 <li>C#</li>
                 <li>LARAVELL (Framework)</li>
+                <p>Mi contacto es: brianolesnievicz@gmail.com</p>
             </div>
             <div class="reyno">
                 <h2>Joaquin Reynoso</h2>
@@ -195,6 +212,7 @@ require_once 'backend/index_view.php';
                 <li>PYTHON (Fullstack)</li>
                 <li>HTML (FrontEnd)</li>
                 <li>CSS (FrontEnd)</li>
+                <p>Mi contacto es: joaquinreynoso627@gmail.com</p>
             </div>
             <div class="tito">
                 <h2>Valentin Tito</h2>
@@ -207,14 +225,10 @@ require_once 'backend/index_view.php';
                 <li>CSS</li>
                 <li>C#</li>
                 <li>Bootstrap</li>
+                <p>Mi contacto es: valentinstito@gmail.com</p>
             </div>
         </div>
     </section>
-    <div id="container-volver">
-        <a href="#home">
-            <img src="IMG/arrow-circle-up.svg">
-        </a>
-    </div>
 </body>
 
 </html>

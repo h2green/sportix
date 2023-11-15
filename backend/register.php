@@ -7,6 +7,10 @@
  * Si el registro es exitoso, se envía un correo electrónico de confirmación y se redirige al usuario a la página de inicio.
  */
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Recibe los datos del formulario de registro
     $username = $_POST["username"];

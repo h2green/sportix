@@ -1,3 +1,5 @@
+
+
 <?php
 
 /**
@@ -8,15 +10,16 @@
  * Si no se recibe una solicitud POST, se redirige al usuario a la página de inicio de sesión.
  */
 
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $username   = $_POST["username"];
     $password   = $_POST["password"];
-
     try {
         require_once 'includes/dbconn.inc.php';
         require_once 'login_control.php';
         require_once 'login_model.php';
 
+        global $mysqli;
         // Manejadores de Errores
         $errors = [];
 
@@ -28,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $result = get_user($mysqli, $username);
 
         // Verificamos si el usuario existe
-        if (is_username_wrong($result)) {
+        if (!username_exists($result)) {
             $errors[] = "Nombre de usuario o contraseña incorrectos.";
         } else {
             $hashPassword = $result["password"];
@@ -42,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($errors) {
             $_SESSION["errors_login"] = $errors;
 
-            header("Location: ../login.php");
+            header("Location: ../login");
             die();
         }
 
@@ -54,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $_SESSION["username"] = htmlspecialchars($result["username"]);
 
         $_SESSION["last_regeneration"] = time();
-        header("Location: ../index.php?login=success");
+        header("Location: ../index?login=success");
         $mysqli = null;
         $stmt = null;
         die();
@@ -64,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 }
 else {
-    header("Location: ../login.php");
+    header("Location: ../login");
     die();
 }
 

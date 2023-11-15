@@ -18,7 +18,9 @@ require_once 'backend/register_view.php';
 <body>
   <form action="backend/register.php" method="post" autocomplete="off">
     <div class="container-img">
-      <img src="IMG/Logo-Sportix.png">
+      <a href="index">
+        <img src="IMG/Logo-Sportix.png">
+      </a>
     </div>
     <h2>Registro</h2>
     <?php

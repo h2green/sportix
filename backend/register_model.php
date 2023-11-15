@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-require_once '..\vendor\autoload.php';
+require '../vendor/autoload.php';
 
 use Symfony\Component\Mailer\Transport\Smtp\EsmtpTransport;
 use Symfony\Component\Mailer\Mailer;
@@ -92,7 +92,7 @@ function get_token(mysqli $mysqli, string $username)
 function send_email_confirmation(mysqli $mysqli, string $email, string $username)
 {
     $token = get_token($mysqli, $username);
-    $msg = 'Hola, ' . $username . ': <br><br> Gracias por registrarte en Sportix. <br><br> Para confirmar tu cuenta, haz click en el siguiente enlace: <br><br> <a href="http://localhost/backend/confirm.php?token=' . $token . '">VERIFICAR CORREO ELECTRONICO</a>';
+    $msg = 'Hola, ' . $username . ': <br><br> Gracias por registrarte en Sportix. <br><br> Para confirmar tu cuenta, haz click en el siguiente enlace: <br><br> <a href="http://sportix.zapto.org/backend/confirm?token=' . $token . '">VERIFICAR CORREO ELECTRONICO</a>';
 
     $transport = new EsmtpTransport('smtp.gmail.com', 587);
     $transport->setUsername('sportixchic@gmail.com');

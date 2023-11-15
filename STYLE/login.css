@@ -61,6 +61,27 @@ h4 {
     font-size: 15px;
 }
 
+/* !Error */
+
+.alert-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+
+.alert {
+    padding: 15px;
+    /* margin-bottom: 20px; */
+    border: 1px solid transparent;
+    border-radius: 4px;
+    width: 55vh;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 /* !Customize the label (the checkbox-btn) */
 
 @keyframes pulse {
@@ -82,7 +103,6 @@ h4 {
 }
 
 .btn {
-    margin-top: 10%;
     appearance: none;
     background-color: transparent;
     border: 0.125em solid #8f7d61;

@@ -9,13 +9,14 @@
 
 $host 		= "localhost";
 $dbusername = "root";
-$dbpassword = "";
+$dbpassword = "rOb3rt0!";
 $dbname 	= "sportixdb";
+$port       = 3306;
 
-
+global $mysqli;
 // Crear Conexion a la base de datos
 try {
-	$mysqli = new mysqli($host, $dbusername, $dbpassword, $dbname);
+	$mysqli = new mysqli($host, $dbusername, $dbpassword, $dbname, $port);
 	if ($mysqli->connect_error) {
 		throw new Exception("Error de conexion: " . $mysqli->connect_error);
 	}

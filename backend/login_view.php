@@ -14,10 +14,10 @@ function check_login_errors()
     if (isset($_SESSION["errors_login"])) {
         $errors = $_SESSION["errors_login"];
 
-        echo "<br>";
-
         foreach ($errors as $error) {
-            echo "" . $error . "<br>";
+            echo '<div id="alert-warning" class="alert alert-warning">';
+            echo '<strong>Info!</strong> ' . $error . '';
+            echo '</div>';
         }
 
         unset($_SESSION["errors_login"]);
