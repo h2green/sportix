@@ -148,8 +148,9 @@ Si tiene alguna pregunta adicional, sugerencias o comentarios, no dude en poners
 
 - **Joaquin Reynoso**
   - Email: joaquinreynoso627@gmail.com
+  - Github: [Jo4-R3y](https://github.com/Jo4-R3y)
 
 - **Brian Olesnievicz**
   - Email: brianolesnievicz@gmail.com
-  - Linkedin: www.linkedin.com/in/brian-olesnievicz-68756b291
+  - Linkedin: [linkedin](www.linkedin.com/in/brian-olesnievicz-68756b291)
   - Github: [merlilawniczak](https://github.com/merlilawniczak/)
