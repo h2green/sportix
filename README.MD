@@ -144,10 +144,12 @@ Si tiene alguna pregunta adicional, sugerencias o comentarios, no dude en poners
 ## Equipo de Desarrollo
 - **Valentin Tito**
   - Email: valentinstito@gmail.com
+  - Github: [DonValen910](https://github.com/DonValen910)
 
 - **Joaquin Reynoso**
-  - EmaiL: joaquinreynoso627@gmail.com
+  - Email: joaquinreynoso627@gmail.com
 
 - **Brian Olesnievicz**
   - Email: brianolesnievicz@gmail.com
   - Linkedin: www.linkedin.com/in/brian-olesnievicz-68756b291
+  - Github: [merlilawniczak](https://github.com/merlilawniczak/)
